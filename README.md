@@ -16,7 +16,7 @@ npm install @moekyawsoe/psc
 
 Create a `.psrc` configuration file in the root of your project with the following structure:
 
-```json
+```ts
 {
   "seedFolder": "src/prisma/seeds",
   "prismaSchemaPath": "src/prisma/schema.prisma"
@@ -49,29 +49,30 @@ The seeder supports the following options:
 
 ### Seed File
 
-Create a seed file in the `seedFolder` directory. For example, `src/prisma/seeds/user.json`:
+Create a seed file in the `seedFolder` directory. For example, `src/prisma/seeds/admin.ts`:
 
-```json
-{
-  "reset": true,
-  "override": true,
-  "join": {
-    "profile": "profileId"
-  },
-  "map": "user",
-  "data": [
+```ts
+import md5 from 'md5';
+
+export default {
+  map: 'admin',
+  data: [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "profileId": 1
+      fullName: 'Greg Crooks',
+      username: 'Marcos.Kunze@gmail.com',
+      email: 'Milan.OConnell@gmail.com',
+      password: md5('asdfasdf'),
+      roleId: 1,
+      createdBy: 'system',
+      updatedBy: null,
     },
-    {
-      "id": 2,
-      "name": "Jane Doe",
-      "email": "jane.doe@example.com",
-      "profileId": 2
-    }
-  ]
-}
+  ],
+  reset: false,
+  override: true,
+};
+
+```
+
+```bash
+npx psc seed
 ```
