@@ -8,6 +8,14 @@ psc is a command-line tool for seeding your Prisma database with initial data. I
 
 To install psc, you need to have Node.js and npm installed. Then, you can install psc using npm:
 
+From GitHub Packages:
+
+```bash
+npm install @moekyawsoe/psc --registry https://npm.pkg.github.com/
+```
+
+From npmjs.com:
+
 ```bash
 npm install @moekyawsoe/psc
 ```
