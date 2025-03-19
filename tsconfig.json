@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ES2018",              // Target ECMAScript version compatible with Node.js
+      "module": "commonjs",            // Use CommonJS for Node.js compatibility
+      "outDir": "./dist",              // Output compiled files to dist/
+      "rootDir": "./src",              // Source files are in src/
+      "strict": true,                  // Enable strict type checking
+      "declaration": true,             // Generate .d.ts type declaration files
+      "esModuleInterop": true,         // Enable interop between CommonJS and ES Modules
+      "skipLibCheck": true,            // Skip type checking of declaration files (faster builds)
+      "forceConsistentCasingInFileNames": true, // Ensure consistent file casing
+      "moduleResolution": "node"       // Use Node.js-style module resolution
+    },
+    "include": [
+      "src/**/*"                      // Include all files in src/ directory
+    ],
+    "exclude": [
+      "node_modules",                 // Exclude node_modules
+      "dist"                          // Exclude the output directory
+    ]
+  }
