@@ -43,7 +43,7 @@ The seeder supports the following options:
 - **reset**: Deletes all records in the target model.
 - **override**: Deletes records with matching IDs before creating new records.
 - **join**: Handles relationships by connecting related records.
-- **map**: Can u as optional with map for model.
+- **map**: Optional with map for model. (if filename use balarbalar.json can use optional as map for model)
 
 ## Example
 
@@ -58,7 +58,7 @@ Create a seed file in the `seedFolder` directory. For example, `src/prisma/seeds
   "join": {
     "profile": "profileId"
   },
-  "map": "user", //if filename use balarbalar.json can use optional as map for model
+  "map": "user",
   "data": [
     {
       "id": 1,
